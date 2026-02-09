@@ -48,3 +48,16 @@ textarea {
 }
 
 /* Button */
+button {
+  margin-top: 10px;
+  padding: 10px 15px;
+  background-color: #4a90e2;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #357ab8;
+}
