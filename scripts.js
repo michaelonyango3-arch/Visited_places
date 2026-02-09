@@ -20,3 +20,7 @@ Place.prototype.getLandmarks = function() {
 Place.prototype.getDetails = function() {
   return `${this.location} (${this.season})`;
 };
+
+// =====================
+// UI Logic
+// =====================
