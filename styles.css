@@ -85,3 +85,15 @@ button:hover {
 
 
 /* Place details */
+#place-details {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 5px;
+  max-width: 500px;
+  margin: 20px auto 0 auto;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#place-details p {
+  margin: 8px 0;
+}
