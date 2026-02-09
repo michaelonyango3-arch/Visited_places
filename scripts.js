@@ -61,9 +61,12 @@ function handleFormSubmit(event) {
   const season = document.getElementById("season").value;
   const notes = document.getElementById("notes").value;
 
-  const landmarks = landmarksInput.split(",").map(function(landmark) {
-    return landmark.trim();
-  });
+  const landmarks = landmarksInput
+    .split(",")
+    .map(function(landmark) {
+      return landmark.trim();
+    })
+    .filter(landmark => landmark.length > 0); // ignore empty
 
   const newPlace = new Place(location, landmarks, season, notes);
   places.push(newPlace);

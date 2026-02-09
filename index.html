@@ -1,56 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Visited Places</title>
-    <link rel="Stylesheet" href="Styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Visited Places</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Visited Places</h1>
-     <!-- Form to add a new place -->
 
-    <form id="place-form">
+  <h1>Visited Places</h1>
+
+  <!-- Form to add a new place -->
+  <form id="place-form">
     <label>
-        Location:
-        <input type="text" id="location" required>
+      Location:
+      <input type="text" id="location" required>
     </label>
     <br><br>
 
     <label>
-        Landmarks:
-        <input type="text" id="landmarks">
+      Landmarks:
+      <input type="text" id="landmarks">
     </label>
     <br><br>
 
     <label>
-        Time of the Year:
-        <input type="text" id="season">
+      Time of the Year:
+      <input type="text" id="season">
     </label>
     <br><br>
 
     <label>
-        Notes:
-        <textarea id="notes"></textarea>
-
+      Notes:
+      <textarea id="notes"></textarea>
     </label>
     <br><br>
 
     <button type="submit">Add place</button>
+  </form>
 
-    </form>
+  <!-- List of visited places -->
+  <h2>My Visited Places</h2>
+  <ul id="places-list"></ul>
 
-   <!-- List of visited places -->
-    <h2>My visited Places</h2>
+  <!-- Place details -->
+  <h2>Place Details</h2>
+  <div id="place-details">
+    <p>Click a place to see details.</p>
+  </div>
 
-    <u id="places-list"></u>
-
-    <!-- Place details -->
-     <h2>Place Details</h2>
-     <div id="place-details" ></div>
-     <p>Click a place to see details</p>
-
-     <!-- JavaScript -->
+  <!-- JavaScript -->
   <script src="scripts.js"></script>
 </body>
 </html>
