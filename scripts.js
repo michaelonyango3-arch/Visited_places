@@ -45,3 +45,11 @@ function displayPlaces() {
 function showPlaceDetails(index) {
   const place = places[index];
   const detailsDiv = document.getElementById("place-details");
+
+  detailsDiv.innerHTML = `
+    <h3>${place.location}</h3>
+    <p><strong>Landmarks:</strong> ${place.getLandmarks()}</p>
+    <p><strong>Time of Year:</strong> ${place.season}</p>
+    <p><strong>Notes:</strong> ${place.notes}</p>
+  `;
+}
