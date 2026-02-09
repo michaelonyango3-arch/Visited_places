@@ -24,3 +24,24 @@ Place.prototype.getDetails = function() {
 // =====================
 // UI Logic
 // =====================
+
+
+let places = [];
+
+function displayPlaces() {
+  const placesList = document.getElementById("places-list");
+  placesList.innerHTML = "";
+
+  places.forEach(function(place, index) {
+    const li = document.createElement("li");
+    li.textContent = place.getLocation();
+    li.addEventListener("click", function() {
+      showPlaceDetails(index);
+    });
+    placesList.appendChild(li);
+  });
+}
+
+function showPlaceDetails(index) {
+  const place = places[index];
+  const detailsDiv = document.getElementById("place-details");
