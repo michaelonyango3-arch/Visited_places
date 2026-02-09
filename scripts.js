@@ -25,7 +25,6 @@ Place.prototype.getDetails = function() {
 // UI Logic
 // =====================
 
-
 let places = [];
 
 function displayPlaces() {
@@ -53,8 +52,9 @@ function showPlaceDetails(index) {
     <p><strong>Notes:</strong> ${place.notes}</p>
   `;
 }
+
 function handleFormSubmit(event) {
-  event.preventDefault();}
+  event.preventDefault();
 
   const location = document.getElementById("location").value;
   const landmarksInput = document.getElementById("landmarks").value;
@@ -68,7 +68,7 @@ function handleFormSubmit(event) {
   const newPlace = new Place(location, landmarks, season, notes);
   places.push(newPlace);
 
-   displayPlaces();
+  displayPlaces();
   event.target.reset();
 }
 
