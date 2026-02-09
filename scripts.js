@@ -8,3 +8,15 @@ function Place(location, landmarks, season, notes) {
   this.season = season;
   this.notes = notes;
 }
+
+Place.prototype.getLocation = function() {
+  return this.location;
+};
+
+Place.prototype.getLandmarks = function() {
+  return this.landmarks.join(", ");
+};
+
+Place.prototype.getDetails = function() {
+  return `${this.location} (${this.season})`;
+};
