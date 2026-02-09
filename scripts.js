@@ -53,3 +53,17 @@ function showPlaceDetails(index) {
     <p><strong>Notes:</strong> ${place.notes}</p>
   `;
 }
+function handleFormSubmit(event) {
+  event.preventDefault();
+
+  const location = document.getElementById("location").value;
+  const landmarksInput = document.getElementById("landmarks").value;
+  const season = document.getElementById("season").value;
+  const notes = document.getElementById("notes").value;
+
+  const landmarks = landmarksInput.split(",").map(function(landmark) {
+    return landmark.trim();
+  });
+
+  const newPlace = new Place(location, landmarks, season, notes);
+  places.push(newPlace);
