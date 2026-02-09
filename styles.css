@@ -97,3 +97,9 @@ button:hover {
 #place-details p {
   margin: 8px 0;
 }
+
+/* Horizontal rule */
+hr {
+  margin: 30px auto;
+  max-width: 500px;
+}
