@@ -31,12 +31,10 @@ function displayPlaces() {
   const placesList = document.getElementById("places-list");
   placesList.innerHTML = "";
 
-  places.forEach(function(place, index) {
+  places.forEach((place, index) => {
     const li = document.createElement("li");
     li.textContent = place.getLocation();
-    li.addEventListener("click", function() {
-      showPlaceDetails(index);
-    });
+    li.addEventListener("click", () => showPlaceDetails(index));
     placesList.appendChild(li);
   });
 }
@@ -63,10 +61,8 @@ function handleFormSubmit(event) {
 
   const landmarks = landmarksInput
     .split(",")
-    .map(function(landmark) {
-      return landmark.trim();
-    })
-    .filter(landmark => landmark.length > 0); // ignore empty
+    .map(l => l.trim())
+    .filter(l => l.length > 0);
 
   const newPlace = new Place(location, landmarks, season, notes);
   places.push(newPlace);
@@ -79,8 +75,6 @@ function handleFormSubmit(event) {
 // Event Listeners
 // =====================
 
-window.addEventListener("load", function() {
-  document
-    .getElementById("place-form")
-    .addEventListener("submit", handleFormSubmit);
+window.addEventListener("load", () => {
+  document.getElementById("place-form").addEventListener("submit", handleFormSubmit);
 });

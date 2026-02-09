@@ -7,49 +7,43 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-  <h1>Visited Places</h1>
+  <h1>Places You've Been</h1>
 
   <!-- Form to add a new place -->
   <form id="place-form">
     <label>
       Location:
-      <input type="text" id="location" required>
+      <input type="text" id="location" required placeholder="Enter city or country">
     </label>
-    <br><br>
+    
+    <label>
+      Landmarks (comma-separated):
+      <input type="text" id="landmarks" placeholder="Eiffel Tower, Louvre">
+    </label>
 
     <label>
-      Landmarks:
-      <input type="text" id="landmarks">
+      Time of Year:
+      <input type="text" id="season" placeholder="Summer, Winter, etc.">
     </label>
-    <br><br>
-
-    <label>
-      Time of the Year:
-      <input type="text" id="season">
-    </label>
-    <br><br>
 
     <label>
       Notes:
-      <textarea id="notes"></textarea>
+      <textarea id="notes" placeholder="Any notes about your visit"></textarea>
     </label>
-    <br><br>
 
-    <button type="submit">Add place</button>
+    <button type="submit">Add Place</button>
   </form>
 
-  <!-- List of visited places -->
+  <!-- Visited Places List -->
   <h2>My Visited Places</h2>
   <ul id="places-list"></ul>
 
-  <!-- Place details -->
+  <!-- Place Details -->
   <h2>Place Details</h2>
   <div id="place-details">
-    <p>Click a place to see details.</p>
+    <p>Click a place to see details</p>
   </div>
 
-  <!-- JavaScript -->
   <script src="scripts.js"></script>
 </body>
 </html>
