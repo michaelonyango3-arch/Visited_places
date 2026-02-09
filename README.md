@@ -79,45 +79,7 @@ place.getLocation();
 
 Expected Output:
 
-"Paris"
-
-Describe: Place.prototype.getLandmarks()
-
-Test:
-It should return the landmarks as a comma-separated string.
-
-Code:
-
-place.getLandmarks();
-
-
-Expected Output:
-
-"Eiffel Tower"
-
-Describe: Place.prototype.getDetails()
-
-Test:
-It should return a formatted string containing the location and season.
-
-Code:
-
-place.getDetails();
-
-
-Expected Output:
-
-"Paris (Spring)"
-
-Application Logic
-
-Users submit a form to create new Place objects.
-
-Each Place object is stored in an array.
-
-The list of places is dynamically rendered in the DOM.
-
-Clicking a place name displays its details.
+"P
 
 Known Issues
 
