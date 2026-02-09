@@ -54,7 +54,7 @@ function showPlaceDetails(index) {
   `;
 }
 function handleFormSubmit(event) {
-  event.preventDefault();
+  event.preventDefault();}
 
   const location = document.getElementById("location").value;
   const landmarksInput = document.getElementById("landmarks").value;
@@ -67,3 +67,17 @@ function handleFormSubmit(event) {
 
   const newPlace = new Place(location, landmarks, season, notes);
   places.push(newPlace);
+
+   displayPlaces();
+  event.target.reset();
+}
+
+// =====================
+// Event Listeners
+// =====================
+
+window.addEventListener("load", function() {
+  document
+    .getElementById("place-form")
+    .addEventListener("submit", handleFormSubmit);
+});
